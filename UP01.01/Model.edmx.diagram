@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8c231d35b70a430095a3400019191790" Name="Diagram1">
+        <EntityTypeShape EntityType="Zwe_UP0101Model.Applications" Width="1.5" PointX="5.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zwe_UP0101Model.Book_Genre" Width="1.5" PointX="7.5" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zwe_UP0101Model.Books" Width="1.5" PointX="5.25" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zwe_UP0101Model.Books_Authors" Width="1.5" PointX="7.5" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zwe_UP0101Model.Books_Users" Width="1.5" PointX="10.5" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zwe_UP0101Model.Complaints" Width="1.5" PointX="7.5" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zwe_UP0101Model.Genres" Width="1.5" PointX="5.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zwe_UP0101Model.Reviews" Width="1.5" PointX="10.5" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zwe_UP0101Model.Roles" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zwe_UP0101Model.Status" Width="1.5" PointX="8.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zwe_UP0101Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zwe_UP0101Model.Users" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <AssociationConnector Association="Zwe_UP0101Model.FK_Applications_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="Zwe_UP0101Model.FK_Book_Genre_Books" ManuallyRouted="false" />
+        <AssociationConnector Association="Zwe_UP0101Model.FK_Book_Genre_Genres" ManuallyRouted="false" />
+        <AssociationConnector Association="Zwe_UP0101Model.FK_Books_Authors_Books" ManuallyRouted="false" />
+        <AssociationConnector Association="Zwe_UP0101Model.FK_Books_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="Zwe_UP0101Model.FK_Books_Users_Books" ManuallyRouted="false" />
+        <AssociationConnector Association="Zwe_UP0101Model.FK_Complaints_Books1" ManuallyRouted="false" />
+        <AssociationConnector Association="Zwe_UP0101Model.FK_Reviews_Books" ManuallyRouted="false" />
+        <AssociationConnector Association="Zwe_UP0101Model.FK_Books_Authors_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="Zwe_UP0101Model.FK_Books_Users_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="Zwe_UP0101Model.FK_Books_Users_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="Zwe_UP0101Model.FK_Complaints_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="Zwe_UP0101Model.FK_Complaints_Users1" ManuallyRouted="false" />
+        <AssociationConnector Association="Zwe_UP0101Model.FK_Reviews_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="Zwe_UP0101Model.FK_Reviews_Users1" ManuallyRouted="false" />
+        <AssociationConnector Association="Zwe_UP0101Model.FK_Users_Roles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
