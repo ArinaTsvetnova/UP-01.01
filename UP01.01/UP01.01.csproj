@@ -91,8 +91,23 @@
     </Compile>
     <Compile Include="Models\AppSession.cs" />
     <Compile Include="Models\UserInfo.cs" />
+    <Compile Include="Pages\AccountPage.xaml.cs">
+      <DependentUpon>AccountPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminAccount.xaml.cs">
+      <DependentUpon>AdminAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AuthorAccount.xaml.cs">
+      <DependentUpon>AuthorAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListBooks.xaml.cs">
+      <DependentUpon>ListBooks.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CatalogBooks.xaml.cs">
+      <DependentUpon>CatalogBooks.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegPage.xaml.cs">
       <DependentUpon>RegPage.xaml</DependentUpon>
@@ -129,7 +144,27 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AccountPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AdminAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AuthorAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ListBooks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CatalogBooks.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -186,6 +221,13 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\exit.jpg" />
+    <Resource Include="Images\profile.jpg" />
+    <Resource Include="Images\admin.jpg" />
+    <Resource Include="Images\author.jpg" />
+    <Resource Include="Images\list.jpg" />
+    <Resource Include="Images\catalog.jpg" />
+    <Resource Include="Images\ikonka.jpg" />
     <Content Include="Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>

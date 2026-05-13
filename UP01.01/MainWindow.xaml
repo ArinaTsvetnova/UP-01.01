@@ -11,6 +11,34 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Frame Grid.Row="1" x:Name="MainFrame" Source="Pages/LoginPage.xaml" NavigationUIVisibility="Hidden" Navigated="MainFrame_Navigated"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Frame Grid.Row="0" Grid.Column="1" x:Name="MainFrame" Source="Pages/LoginPage.xaml" NavigationUIVisibility="Hidden" Navigated="MainFrame_Navigated"/>
+        <Border Grid.Column="0" Grid.Row="0" Background="#FFDE73" BorderThickness="0,0,1,0" Height="270">
+            <StackPanel VerticalAlignment="Top">
+                <Image Source="/Images/ikonka.jpg" HorizontalAlignment="Center" Height="30"/>
+                <Button x:Name="CatalogPage" ToolTip="Каталог книг" Click="CatalogPage_Click" Height="40">
+                    <Image Source="/Images/catalog.jpg"/>
+                </Button>
+                <Button x:Name="ListPage" ToolTip="Мои списки" Click="ListPage_Click" Height="40">
+                    <Image Source="/Images/list.jpg"/>
+                </Button>
+                <Button x:Name="Author" ToolTip="Кабинет автора"  Click="Author_Click" Height="40">
+                    <Image Source="/Images/author.jpg"/>
+                </Button>
+                <Button x:Name="Admin" ToolTip="Администрирование" Click="Admin_Click" Height="40">
+                    <Image Source="/Images/admin.jpg"/>
+                </Button>
+                <Button x:Name="Profile" ToolTip="Профиль" Click="Profile_Click" Height="40">
+                    <Image Source="/Images/profile.jpg"/>
+                </Button>
+                <Button x:Name="Exit" ToolTip="Выйти" Click="Exit_Click" Height="40">
+                    <Image Source="/Images/exit.jpg"/>
+                </Button>
+            </StackPanel>
+        </Border>
+
     </Grid>
 </Window>

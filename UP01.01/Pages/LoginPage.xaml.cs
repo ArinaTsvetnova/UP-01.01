@@ -59,13 +59,13 @@ namespace UP01._01.Pages
                     case 0: // Не существует
                         break;
                     case 1: // Читатель
-                        NavigationService.Navigate(new RegPage());
+                        NavigationService.Navigate(new CatalogBooks());
                         break;
                     case 2: // Автор
-                        NavigationService.Navigate(new RegPage());
+                        NavigationService.Navigate(new CatalogBooks());                     
                         break;
                     case 3: // Админ
-                        NavigationService.Navigate(new RegPage());
+                        NavigationService.Navigate(new CatalogBooks());                     
                         break;
                 }
             }
