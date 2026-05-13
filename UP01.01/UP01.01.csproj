@@ -100,6 +100,9 @@
     <Compile Include="Pages\AuthorAccount.xaml.cs">
       <DependentUpon>AuthorAccount.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\FREEZ.xaml.cs">
+      <DependentUpon>FREEZ.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ListBooks.xaml.cs">
       <DependentUpon>ListBooks.xaml</DependentUpon>
     </Compile>
@@ -153,6 +156,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\AuthorAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FREEZ.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

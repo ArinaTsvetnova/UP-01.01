@@ -24,7 +24,11 @@ namespace UP01._01
     {
         public MainWindow()
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            if (AppSession.CurrentUser.Freez == true)
+            {
+
+            }
         }
         private void MainFrame_Navigated(object sender, NavigationEventArgs e)
         {

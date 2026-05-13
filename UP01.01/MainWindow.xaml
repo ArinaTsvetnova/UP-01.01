@@ -39,6 +39,6 @@
                 </Button>
             </StackPanel>
         </Border>
-
+        <Border Grid.Row="0" Grid.Column="0" Background="#FF0000" BorderThickness="1" CornerRadius="5" Visibility="Collapsed"/>
     </Grid>
 </Window>

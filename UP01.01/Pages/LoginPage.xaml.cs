@@ -24,6 +24,13 @@ namespace UP01._01.Pages
         public LoginPage()
         {
             InitializeComponent();
+            if(AppSession.CurrentUser.IDRole != 0)
+            {
+                if (AppSession.CurrentUser.Freez == true)
+                {
+                    NavigationService.Navigate(new FREEZ());
+                }
+            }
         }
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
@@ -67,6 +74,10 @@ namespace UP01._01.Pages
                     case 3: // Админ
                         NavigationService.Navigate(new CatalogBooks());                     
                         break;
+                }
+                if (AppSession.CurrentUser.Freez == true)
+                {
+                    NavigationService.Navigate(new FREEZ());
                 }
             }
         }
