@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="Grid">
+        <Setter Property="Background" Value="#E8FB71"/>
+    </Style>
+    <Style TargetType="Button">
+        <Setter Property="Foreground" Value="#007B25"/>
+        <Setter Property="Background" Value="#FFDE73"/>
+    </Style>
+</ResourceDictionary>

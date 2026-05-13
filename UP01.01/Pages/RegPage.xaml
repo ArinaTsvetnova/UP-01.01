@@ -1,0 +1,25 @@
+﻿<Page x:Class="UP01._01.Pages.RegPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UP01._01.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RegPage">
+
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Регистрация" FontSize="40" Foreground="#215756" HorizontalAlignment="Center" Margin="5"/>
+            <TextBlock Text="Введите имя" FontSize="20" Foreground="#215756" HorizontalAlignment="Center" Margin="5"/>
+            <TextBox x:Name="name" FontSize="11" Foreground="#487994" Background="White" Height="40" Width="300" Margin="3"/>
+            <TextBlock Text="Введите почту" FontSize="20" Foreground="#215756" HorizontalAlignment="Center" Margin="3"/>
+            <TextBox x:Name="email" FontSize="11" Foreground="#487994" Background="White" Height="40" Width="300" Margin="3"/>
+            <TextBlock Text="Введите пароль" FontSize="20" Foreground="#215756" HorizontalAlignment="Center" Margin="3"/>
+            <TextBox x:Name="login" FontSize="11" Foreground="#487994" Background="White" Height="40" Width="300" Margin="3"/>
+            <TextBlock Text="Введите логин" FontSize="20" Foreground="#215756" HorizontalAlignment="Center" Margin="3"/>
+            <TextBox x:Name="password" FontSize="11" Foreground="#487994" Background="White" Height="40" Width="300" Margin="3"/>
+            <Button x:Name="Reg" Content="Зарегистрировать" Width="130" Height="40" FontSize="14" Click="Reg_Click" Margin="3"/>
+        </StackPanel>
+    </Grid>
+</Page>

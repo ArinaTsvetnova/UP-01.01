@@ -24,5 +24,8 @@ namespace UP01._01
         {
             InitializeComponent();
         }
+        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+        }
     }
 }
