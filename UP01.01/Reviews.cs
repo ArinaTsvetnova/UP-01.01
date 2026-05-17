@@ -20,6 +20,7 @@ namespace UP01._01
         public Nullable<int> IDBook { get; set; }
         public string Text { get; set; }
         public double Rating { get; set; }
+        public Nullable<bool> Freez { get; set; }
     
         public virtual Books Books { get; set; }
         public virtual Users Users { get; set; }

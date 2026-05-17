@@ -23,11 +23,23 @@ namespace UP01._01.Pages
     {
         List<Books> AllBooks;
         List<Genres> genresort;
+        List<Book_Genre> bookgen;
         public CatalogBooks()
         {
             InitializeComponent();
             AllBooks = Core.Context.Books.ToList();
-            LbBooks.ItemsSource = AllBooks;
+            genresort = Core.Context.Genres.ToList();
+            bookgen = Core.Context.Book_Genre.ToList();
+            if (AppSession.CurrentUser != null)
+            {
+                if (AppSession.CurrentUser.IDRole != 3)
+                { LbBooks.ItemsSource = AllBooks.Where(j => j.Freez == false); }
+                else
+                {
+                    LbBooks.ItemsSource = AllBooks;
+                }
+            }
+            
 
             List<Sortir> sort = new List<Sortir>()
             {
@@ -51,7 +63,7 @@ namespace UP01._01.Pages
             genresort = Core.Context.Genres.ToList();
             CbGenreFilter.ItemsSource = genresort;
             CbGenreFilter.DisplayMemberPath = "Name";
-            CbGenreFilter.SelectedIndex = 0;
+            CbGenreFilter.SelectedIndex = 11;
         }
         private void BtnSearch_Click(object sender, RoutedEventArgs e)
         {
@@ -66,10 +78,10 @@ namespace UP01._01.Pages
         }
         private void CbSort_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (CbGenreFilter.SelectedIndex == 0)
+            if (CbSort.SelectedIndex == 0)
             {
                 LbBooks.ItemsSource = null;
-                LbBooks.ItemsSource = Core.Context.Books.OrderByDescending(f => f.Name).ToList();
+                LbBooks.ItemsSource = Core.Context.Books.OrderBy(f => f.Name).ToList();
             }
             else if (CbSort.SelectedIndex == 1)
             {
@@ -81,8 +93,16 @@ namespace UP01._01.Pages
         }
         private void CbGenreFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //LbBooks.ItemsSource = null;
-            //LbBooks.ItemsSource = Core.Context.Books.OrderBy(f => f.Name).ToList();
+            LbBooks.ItemsSource = null;
+            if (CbGenreFilter.SelectedIndex == 11) // "Все жанры"
+            {
+                LbBooks.ItemsSource = AllBooks;
+            }
+            else
+            {
+                MessageBox.Show("Фильтрация по жанрам требует доработки связи с БД");
+            }
+
         }
 
         private void BookCard_Click(object sender, RoutedEventArgs e)

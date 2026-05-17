@@ -96,8 +96,20 @@
     <Compile Include="Pages\AccountPage.xaml.cs">
       <DependentUpon>AccountPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\AddBookPage.xaml.cs">
+      <DependentUpon>AddBookPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AdminAccount.xaml.cs">
       <DependentUpon>AdminAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AligAuthor.xaml.cs">
+      <DependentUpon>AligAuthor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AligBook.xaml.cs">
+      <DependentUpon>AligBook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AligRewie.xaml.cs">
+      <DependentUpon>AligRewie.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\AuthorAccount.xaml.cs">
       <DependentUpon>AuthorAccount.xaml</DependentUpon>
@@ -116,6 +128,9 @@
     </Compile>
     <Compile Include="Pages\RegPage.xaml.cs">
       <DependentUpon>RegPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RewieBook.xaml.cs">
+      <DependentUpon>RewieBook.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Text.xaml.cs">
       <DependentUpon>Text.xaml</DependentUpon>
@@ -156,7 +171,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\AddBookPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AdminAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AligAuthor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AligBook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AligRewie.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -181,6 +212,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\RegPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RewieBook.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -26,6 +26,10 @@ namespace UP01._01.Pages
         public AccountPage()
         {
             InitializeComponent();
+            if (AppSession.CurrentUser != null && AppSession.CurrentUser.Freez == true)
+            {
+                Freezblok.Visibility = Visibility.Visible;
+            }
             //UName.Text = $"Здравствуй, {UserInfo.kupt.Name}!";
             //List<Books> film = Core.Context.Books.ToList();
             //List<Books_Users> bu = Core.Context.Books_Users.Where(t => t.IDUser == UserInfo.kupt.ID).ToList();

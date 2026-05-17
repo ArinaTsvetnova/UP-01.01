@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище Zwe_UP0101Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище Zwe_UP0101Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Applications">
           <Key>
             <PropertyRef Name="ID" />
@@ -78,6 +78,7 @@
           <Property Name="IDBook" Type="int" />
           <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Rating" Type="float" Nullable="false" />
+          <Property Name="Freez" Type="bit" />
         </EntityType>
         <EntityType Name="Roles">
           <Key>
@@ -385,8 +386,7 @@
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Zwe_UP0101Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -484,6 +484,7 @@
           <NavigationProperty Name="Books" Relationship="Self.FK_Reviews_Books" FromRole="Reviews" ToRole="Books" />
           <NavigationProperty Name="Users" Relationship="Self.FK_Reviews_Users" FromRole="Reviews" ToRole="Users" />
           <NavigationProperty Name="Users1" Relationship="Self.FK_Reviews_Users1" FromRole="Reviews" ToRole="Users" />
+          <Property Name="Freez" Type="Boolean" />
         </EntityType>
         <EntityType Name="Roles">
           <Key>
@@ -881,6 +882,7 @@
           <EntitySetMapping Name="Reviews">
             <EntityTypeMapping TypeName="Zwe_UP0101Model.Reviews">
               <MappingFragment StoreEntitySet="Reviews">
+                <ScalarProperty Name="Freez" ColumnName="Freez" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="IDUser" ColumnName="IDUser" />
                 <ScalarProperty Name="IDUserA" ColumnName="IDUserA" />

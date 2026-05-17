@@ -44,7 +44,7 @@ namespace UP01._01.Pages
             if (user.Freez)
             {
                 MessageBox.Show("Ваш аккаунт заблокирован. Обратитесь к администратору.");
-                return;
+                NavigationService.Navigate(new CatalogBooks());
             }
             if (user.Password != Tpassword)
             {
