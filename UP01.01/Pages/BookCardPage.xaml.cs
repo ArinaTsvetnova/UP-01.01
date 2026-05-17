@@ -23,10 +23,12 @@ namespace UP01._01.Pages
     public partial class BookCardPage : Page
     {
         public Books books { get; set; }
-        List<Reviews> reviews { get; set; }
+        private Books selectBook;
+        List <Reviews> reviews { get; set; }
         public BookCardPage(Books b)
         {
             InitializeComponent();
+            selectBook = b;
             reviews = Core.Context.Reviews.ToList();
             books = b;
             this.DataContext = this;
@@ -50,7 +52,15 @@ namespace UP01._01.Pages
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new AddBookPage());
+            if (selectBook == null)
+            {
+                MessageBox.Show("Книга недоступна, попробуйте зайти позднее");
+            }
+            NavigationService.Navigate(new AddBookPage(selectBook));
+            if (NavigationService.CanGoForward)
+            {
+                NavigationService.GoForward();
+            }
         }
 
         private void AlBook_Click(object sender, RoutedEventArgs e)

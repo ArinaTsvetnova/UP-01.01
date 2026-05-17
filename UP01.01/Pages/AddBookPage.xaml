@@ -9,6 +9,12 @@
       Title="AddBookPage">
 
     <Grid>
-        
+        <StackPanel>
+            <TextBlock x:Name="priv" FontSize="17" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
+            <Button Content="Заброшено" Height="40" Width="100" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Click="Button_Click"/>
+            <Button Content="В планах" Height="40" Width="100" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Click="Button_Click1"/>
+            <Button Content="Читаю" Height="40" Width="100" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Click="Button_Click2"/>
+            <Button Content="Прочитано" Height="40" Width="100" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Click="Button_Click3"/>
+        </StackPanel>
     </Grid>
 </Page>
