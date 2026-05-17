@@ -25,9 +25,12 @@ namespace UP01._01
         public MainWindow()
         {
             InitializeComponent();
-            if (AppSession.CurrentUser.Freez == true)
+            if(AppSession.CurrentUser != null)
             {
-
+                if (AppSession.CurrentUser.Freez == true)
+                {
+                    error.Visibility = Visibility.Visible;
+                }
             }
         }
         private void MainFrame_Navigated(object sender, NavigationEventArgs e)

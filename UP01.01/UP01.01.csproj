@@ -90,6 +90,8 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AppSession.cs" />
+    <Compile Include="Models\CatalogB.cs" />
+    <Compile Include="Models\Sortir.cs" />
     <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Pages\AccountPage.xaml.cs">
       <DependentUpon>AccountPage.xaml</DependentUpon>
@@ -100,8 +102,8 @@
     <Compile Include="Pages\AuthorAccount.xaml.cs">
       <DependentUpon>AuthorAccount.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\FREEZ.xaml.cs">
-      <DependentUpon>FREEZ.xaml</DependentUpon>
+    <Compile Include="Pages\BookCardPage.xaml.cs">
+      <DependentUpon>BookCardPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ListBooks.xaml.cs">
       <DependentUpon>ListBooks.xaml</DependentUpon>
@@ -159,7 +161,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\FREEZ.xaml">
+    <Page Include="Pages\BookCardPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

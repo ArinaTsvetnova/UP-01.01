@@ -16,7 +16,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Frame Grid.Row="0" Grid.Column="1" x:Name="MainFrame" Source="Pages/LoginPage.xaml" NavigationUIVisibility="Hidden" Navigated="MainFrame_Navigated"/>
-        <Border Grid.Column="0" Grid.Row="0" Background="#FFDE73" BorderThickness="0,0,1,0" Height="270">
+        <Border VerticalAlignment="Top" x:Name="sidebar" Grid.Column="0" Grid.Row="0" Background="#FFDE73" BorderThickness="0,0,1,0" Height="270">
             <StackPanel VerticalAlignment="Top">
                 <Image Source="/Images/ikonka.jpg" HorizontalAlignment="Center" Height="30"/>
                 <Button x:Name="CatalogPage" ToolTip="Каталог книг" Click="CatalogPage_Click" Height="40">
@@ -39,6 +39,6 @@
                 </Button>
             </StackPanel>
         </Border>
-        <Border Grid.Row="0" Grid.Column="0" Background="#FF0000" BorderThickness="1" CornerRadius="5" Visibility="Collapsed"/>
+        <Border x:Name="error" Grid.Row="0" Grid.Column="0" Background="#FF0000" BorderThickness="1" CornerRadius="5" Visibility="Collapsed"/>
     </Grid>
 </Window>

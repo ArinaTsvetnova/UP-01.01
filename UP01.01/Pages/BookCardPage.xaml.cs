@@ -12,22 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Collections.Specialized.BitVector32;
 
 namespace UP01._01.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для FREEZ.xaml
+    /// Логика взаимодействия для BookCardPage.xaml
     /// </summary>
-    public partial class FREEZ : Page
+    public partial class BookCardPage : Page
     {
-        public FREEZ()
+        public Books books { get; set; }
+        public BookCardPage(Books b)
         {
             InitializeComponent();
-        }
-
-        private void Arr_Click(object sender, RoutedEventArgs e)
-        {
-
+            books = b;
+            this.DataContext = this;
         }
     }
 }
