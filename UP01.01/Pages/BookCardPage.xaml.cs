@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UP01._01.Models;
 using static System.Collections.Specialized.BitVector32;
 
 namespace UP01._01.Pages
@@ -25,8 +26,42 @@ namespace UP01._01.Pages
         public BookCardPage(Books b)
         {
             InitializeComponent();
+            if (AppSession.CurrentUser != null && AppSession.CurrentUser.IDRole == 3)
+            {
+                Block.Visibility = Visibility.Visible;
+            }
             books = b;
             this.DataContext = this;
+            foreach (var a in books.Book_Genre)
+                ganre.Text = a.Genres.Name;
+        }
+
+        private void Read_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Text());
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AlBook_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AlAuthor_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void BookRewie_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Block_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
